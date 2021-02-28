@@ -83,3 +83,44 @@
     const goSportsTeam = true;
     const dragonball = 'z';
 ```
+
+#### 20.2 Additional trailing comma: Yup. eslint: comma-dangle
+
+    Why? This leads to cleaner git diffs. Also, transpilers like Babel will remove the additional trailing comma in the transpiled code which means you don’t have to worry about the trailing comma problem in legacy browsers.
+    
+    
+```diff
+// bad - git diff without trailing comma
+const hero = {
+     firstName: 'Florence',
+-    lastName: 'Nightingale'
++    lastName: 'Nightingale',
++    inventorOf: ['coxcomb chart', 'modern nursing']
+};
+
+// good - git diff with trailing comma
+const hero = {
+     firstName: 'Florence',
+     lastName: 'Nightingale',
++    inventorOf: ['coxcomb chart', 'modern nursing'],
+};
+```
+
+#### 8.6 Enforce the location of arrow function bodies with implicit returns. eslint: implicit-arrow-linebreak
+
+```js
+    // bad
+    (foo) =>
+      bar;
+
+    (foo) =>
+      (bar);
+
+    // good
+    (foo) => bar;
+    (foo) => (bar);
+    (foo) => (
+       bar
+    )
+```
+
