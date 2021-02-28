@@ -1,0 +1,85 @@
+# prettier-config-conformance
+
+> prettier configuration for optimizing diff/AST's
+
+###  whitespace
+
+[source@airbnb/javascript#whitespace--in-braces](https://github.com/airbnb/javascript#whitespace--in-braces)
+
+- 19.12 Add spaces inside curly braces. eslint: object-curly-spacing
+
+```jsx
+
+
+
+    // bad
+    const foo = {clark: 'kent'};
+
+    // good
+    const foo = { clark: 'kent' };
+
+```
+
+#### arrow-parens
+
+- 8.4 Always include parentheses around arguments for clarity and consistency. eslint: arrow-parens
+
+[source@airbnb/javascript#arrows--one-arg-parens](https://github.com/airbnb/javascript#arrows--one-arg-parens)
+
+ > Why? Minimizes diff churn when adding or removing arguments.
+```jsx
+    // bad
+    [1, 2, 3].map(x => x * x);
+
+    // good
+    [1, 2, 3].map((x) => x * x);
+
+    // bad
+    [1, 2, 3].map(number => (
+      `A long string with the ${number}. It’s so long that we don’t want it to take up space on the .map line!`
+    ));
+
+    // good
+    [1, 2, 3].map((number) => (
+      `A long string with the ${number}. It’s so long that we don’t want it to take up space on the .map line!`
+    ));
+
+    // bad
+    [1, 2, 3].map(x => {
+      const y = x + 1;
+      return x * y;
+    });
+
+    // good
+    [1, 2, 3].map((x) => {
+      const y = x + 1;
+      return x * y;
+    });
+```
+
+##### one var
+
+- 13.2 Use one const or let declaration per variable or assignment. eslint: one-var
+
+> Why? It’s easier to add new variable declarations this way, and you never have to worry about swapping out a ; for a , 
+> or introducing punctuation-only diffs. You can also step through each declaration with the debugger, instead of jumping through all of them at once.
+
+##### [ref:eslint/rules/one-var](https://eslint.org/docs/rules/one-var)
+
+```jsx
+    // bad
+    const items = getItems(),
+        goSportsTeam = true,
+        dragonball = 'z';
+
+    // bad
+    // (compare to above, and try to spot the mistake)
+    const items = getItems(),
+        goSportsTeam = true;
+        dragonball = 'z';
+
+    // good
+    const items = getItems();
+    const goSportsTeam = true;
+    const dragonball = 'z';
+```
