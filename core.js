@@ -24,7 +24,7 @@ module.exports = {
         trailingComma: 'always',
       },
     ],
-    'max-len': [2, 130, 4],
+    'max-len': [2, 140, 4],
     'no-param-reassign': [
       2,
       {
@@ -37,11 +37,11 @@ module.exports = {
     'comma-dangle': [
       2,
       {
-        arrays: 'always-multiline',
-        objects: 'always-multiline',
-        imports: 'always-multiline',
-        exports: 'always-multiline',
-        functions: 'never',
+        arrays: 'always',
+        objects: 'always',
+        imports: 'always',
+        exports: 'always',
+        functions: 'always',
       },
     ],
     'import/no-extraneous-dependencies': [2, { devDependencies: true }],
