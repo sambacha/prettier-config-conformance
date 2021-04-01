@@ -1,6 +1,17 @@
-# prettier-config-conformance
+# [prettier-config-conformance](#)
 
 > prettier configuration for optimizing diff/AST's
+
+
+## Quickstart
+
+```bash
+wget https://raw.githubusercontent.com/sambacha/prettier-config-conformance/master/.prettierrc.json
+```
+
+```bash
+curl -O https://raw.githubusercontent.com/sambacha/prettier-config-conformance/master/.prettierrc.json
+```
 
 ###  whitespace
 
