@@ -1,0 +1,20 @@
+{
+  "name": "prettier-config-conformance",
+  "version": "1.0.0",
+  "description": "Prettier configuration for optimizing diff/AST's",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sambacha/prettier-config-conformance.git"
+  },
+  "keywords": ["prettier", "config", "conformance", "ast", "ast diff"],
+  "author": "sam bacha <sam@freighttrust.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sambacha/prettier-config-conformance/issues"
+  },
+  "homepage": "https://github.com/sambacha/prettier-config-conformance#readme"
+}
