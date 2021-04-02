@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Prettier configuration for optimizing diff/AST's",
   "main": "index.js",
+  "prettier": "prettier-config-conformance",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0"
   },
