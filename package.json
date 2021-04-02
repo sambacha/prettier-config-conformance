@@ -11,7 +11,13 @@
     "type": "git",
     "url": "git+https://github.com/sambacha/prettier-config-conformance.git"
   },
-  "keywords": ["prettier", "config", "conformance", "ast", "ast diff"],
+  "keywords": [
+    "prettier",
+    "config",
+    "conformance",
+    "ast",
+    "ast diff"
+  ],
   "author": "sam bacha <sam@freighttrust.com>",
   "license": "MIT",
   "bugs": {

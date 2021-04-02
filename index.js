@@ -3,5 +3,9 @@
 'use strict';
 
 module.exports = {
-  extends: [require.resolve('./core'), require.resolve('./plugins/react'), require.resolve('prettier.config.js')],
+  extends: [
+    require.resolve('./core'),
+    require.resolve('./plugins/react'),
+    require.resolve('prettier.config.js'),
+  ],
 };

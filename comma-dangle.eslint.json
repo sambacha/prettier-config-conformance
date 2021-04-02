@@ -1,9 +1,12 @@
 {
-    "comma-dangle": ["error", {
-        "arrays": "always",
-        "objects": "always",
-        "imports": "always",
-        "exports": "always",
-        "functions": "always"
-    }]
+  "comma-dangle": [
+    "error",
+    {
+      "arrays": "always",
+      "objects": "always",
+      "imports": "always",
+      "exports": "always",
+      "functions": "always"
+    }
+  ]
 }
