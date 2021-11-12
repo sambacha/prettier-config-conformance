@@ -32,6 +32,12 @@ module.exports = {
     'react/no-typos': 2,
     'react/sort-prop-types': 2,
 
+    // style
+    // WIP
+    "react/jsx-curly-spacing": [2, "never", {
+    "allowMultiline": false,
+    "spacing": {"objectLiterals": "never"}
+  }],
     // react-hooks
     'react-hooks/rules-of-hooks': 2,
     'react-hooks/exhaustive-deps': 2,
