@@ -1,6 +1,6 @@
 /**
  * @file react config
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 'use strict';
@@ -52,10 +52,13 @@ module.exports = {
         'react/prop-types': 0,
       },
     },
-
-    // When writing fixtures, we tend to focus on the specific component and
-    // don't require React in scope as we never end up executing the code. The
-    // fixtures are often used for asserting transformations on the file
+  /**
+  * When writing fixtures, we tend to focus on the specific component and
+  * don't require React in scope as we never end up executing the code. The
+  * fixtures are often used for asserting transformations on the file
+  * @rule react/react-in-jsx-scope
+  * @files {fixtures} 
+  */
     {
       files: ['**/fixtures/**/*.js'],
       rules: {

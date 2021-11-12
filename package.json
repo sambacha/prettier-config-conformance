@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/sambacha/prettier-config-conformance/issues"
   },
-  "homepage": "https://github.com/sambacha/prettier-config-conformance#readme"
+  "homepage": "https://github.com/sambacha/prettier-config-conformance#readme",
+  "dependencies": {
+    "prettier": "^2.4.1"
+  }
 }
