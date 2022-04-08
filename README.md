@@ -4,6 +4,10 @@
 
 ## Quickstart
 
+```sh
+wget https://raw.githubusercontent.com/sambacha/prettier-config-conformance/master/.prettierrc.js
+```
+
 ```bash
 wget https://raw.githubusercontent.com/sambacha/prettier-config-conformance/master/.prettierrc.json
 ```
