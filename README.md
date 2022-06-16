@@ -135,3 +135,68 @@ const hero = {
 (foo) => bar;
 (foo) => bar;
 ```
+
+## Parser Differences
+
+[see prettier playground](https://prettier.io/playground/#N4Igxg9gdgLgprEAuEB6AVOgOlABO3AAQAcBDMAa1IHM5dTiBLAOgCc4BnY6DuHfIgDMArlDAxG0egBNpAUQBuCGABlGHeFDit+6VDlKzFytRoTaAFFhCC4MMAAtrAGlxwlsXAF4AfLmD8uJBQGrjSpDCk3v6BuLioqERQEPBhcGCMALakADa4AIwAzIUA7EHQSqwwHLgwELgOcAAeuAq5wnQArIUAnLFBDqSMAJLSSLjWAAxN3X0ggQC+OIHBoQBWHFJeuABSAMoA8gByzBqsjFDUjIIAnhbhka5Qwjk5rgBMAJTLeLjsMMJWHh3Mo2JxuFBpAB1RgwBxWX5xLQAd1wACVwTw4BYNtBXAFEXEGnBDNoOOMCUSqRNwNBNDAALQwG7EPjIGkMYg5RhgCKSKCoXFQADcjlIrF4MC8AFUACoAMQZAA5rP04ktCQtvr9tVqQM4QBBiBIeMhQOLWBBkQAFcUIDjIEC5ZGkG4Og0AI1Y5Aodj2pEycDUWmQMFYHU93sofrIGUuyEEuV4BrgmQ9cFkGZUpEuwhocHlEFY2RgEnjKFIwjq+pADhgmRyUIcsPB5Dge3tsMYClhN0dZx5MBrF14VWt3uo2QTSbgBo2TT2F2oOTgAEVhCk4NOcsmQGQJdpHR7SOmcjXiOdYDDpHDkErJgaLxBeFDvcRHc7Xe6QABHDfwccjQdFBVnUeka3YP9GHYccaCnJBEx3WcQF4TJGFDcNkI4JcV3XTcMIjEBIg9a9byQd4DTDIZuUuABhCBMngp1XhrYReFlE9gMQ3cFA6YZIWUPYwHOY0AEFIT2ZkV23XgFgWIA)
+
+### Example Typescript file
+
+
+```typescript
+/**
+ * @package api.response
+ * @function addEventListener
+ */
+ addEventListener("fetch", event => {
+    const data = {
+      // @note decimal 1337 converts to hex value 539
+      chaiId: "0x539"
+    }
+  
+    const json = JSON.stringify(data, null, 2)
+  
+    return event.respondWith(
+      new Response(json, {
+        headers: {
+          "content-type": "application/json;charset=UTF-8"
+        }
+      })
+    )
+  })
+```
+
+Typescript Compiler
+
+```json
+
+[
+    {
+      "type": "Block",
+      "value": "*\n * @package api.response\n * @function addEventListener\n ",
+      "range": [0, 62],
+      "loc": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 4, "column": 3 }
+      },
+      "placement": "endOfLine",
+      "leading": true,
+      "trailing": false,
+      "nodeDescription": "ExpressionStatement"
+    },
+    {
+      "type": "Line",
+      "value": " @note decimal 1337 converts to hex value 539",
+      "range": [121, 168],
+      "loc": {
+        "start": { "line": 7, "column": 4 },
+        "end": { "line": 7, "column": 51 }
+      },
+      "placement": "ownLine",
+      "leading": true,
+      "trailing": false,
+      "nodeDescription": "Property chaiId"
+    }
+  ]
+```
+
