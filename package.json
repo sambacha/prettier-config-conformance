@@ -1,6 +1,6 @@
 {
   "name": "prettier-config-conformance",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Prettier configuration for optimizing diff/AST's",
   "main": "index.js",
   "prettier": "prettier-config-conformance",
@@ -18,13 +18,14 @@
     "ast",
     "ast diff"
   ],
-  "author": "sam bacha <sam@freighttrust.com>",
-  "license": "MIT",
+  "author": "sam bacha <sam@manifoldfinance.com>",
+  "license": "UPL-1.0",
   "bugs": {
     "url": "https://github.com/sambacha/prettier-config-conformance/issues"
   },
   "homepage": "https://github.com/sambacha/prettier-config-conformance#readme",
   "dependencies": {
-    "prettier": "^2.4.1"
+    "prettier": "^2.6.0",
+    "@trivago/prettier-plugin-sort-imports": "^3.2.0"
   }
 }
