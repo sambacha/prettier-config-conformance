@@ -24,7 +24,7 @@ module.exports = {
   tabWidth: 2,
   trailingComma: 'all',
   useTabs: false,
-  vueIndentScriptAndStyle: false
+  vueIndentScriptAndStyle: false,
   importOrder: [
     "^(react|react-dom)$",
     "^next.+$",
